@@ -1,0 +1,95 @@
+
+#TESTS
+
+
+#Owner tests
+
+###
+POST http://localhost:8080/owners/save
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Alexey",
+  "birthday": "2024-03-27"
+}
+
+<> 2024-03-27T195311.200.json
+
+###
+POST http://localhost:8080/owners/save
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Ekaterina",
+  "birthday": "2024-03-27"
+}
+
+<> 2024-03-27T195335.200.json
+
+
+###
+POST http://localhost:8080/owners/save
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Boris",
+  "birthday": "2024-03-27"
+}
+
+<> 2024-03-27T195340.200.json
+
+
+###
+POST http://localhost:8080/owners/save
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Julia",
+  "birthday": "2024-03-27"
+}
+
+<> 2024-03-27T195343.200.json
+
+###
+GET http://localhost:8080/owners/getById/1
+
+<> 2024-03-27T195356.200.json
+<> 2024-03-27T194445.200.json
+
+###
+GET http://localhost:8080/owners/getAllOwners
+
+<> 2024-03-27T195402.200.json
+<> 2024-03-27T194707.200.json
+
+
+###
+PATCH http://localhost:8080/owners/patch
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "New name",
+  "birthday": "2400-10-26"
+}
+
+
+###
+DELETE http://localhost:8080/owners/deleteByEntity
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Boris",
+  "birthday": "2024-03-27"
+}
+
+###
+DELETE http://localhost:8080/owners/deleteById/1
+
+###
+DELETE http://localhost:8080/owners/deleteAll

@@ -1,0 +1,78 @@
+###
+POST http://localhost:8080/cats/save
+Content-Type: application/json
+
+{
+  "id": 5,
+  "birthday": "2024-03-27",
+  "race": "race fifth",
+  "colour": "white",
+  "ownerId": 1,
+  "name": "fifth"
+}
+
+###
+POST http://localhost:8080/cats/save
+Content-Type: application/json
+
+{
+  "id": 6,
+  "birthday": "2024-03-27",
+  "race": "race six",
+  "colour": "white",
+  "ownerId": 1,
+  "name": "six"
+}
+
+###
+POST http://localhost:8080/cats/save
+Content-Type: application/json
+
+{
+  "id": 7,
+  "birthday": "2024-03-27",
+  "race": "race seventh",
+  "colour": "white",
+  "ownerId": 1,
+  "name": "seventh"
+}
+
+
+###
+DELETE http://localhost:8080/cats/deleteById/5
+
+###
+DELETE http://localhost:8080/cats/deleteByEntity
+Content-Type: application/json
+
+{
+  "id": 7,
+  "birthday": "2024-03-27",
+  "race": "race seventh",
+  "colour": "white",
+  "ownerId": 1,
+  "name": "seventh"
+}
+
+
+###
+PATCH http://localhost:8080/cats/patch
+Content-Type: application/json
+
+{
+  "id": 6,
+  "birthday": "2024-03-27",
+  "race": "3333",
+  "colour": "222",
+  "ownerId": 1,
+  "name": "1111"
+}
+
+###
+GET http://localhost:8080/cats/getById/6
+
+###
+GET http://localhost:8080/cats/getAllCats
+
+###
+POST http://localhost:8080/cats/addFriend?firstFriendId=6&secondFriendId=10

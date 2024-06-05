@@ -1,0 +1,11 @@
+rootProject.name = 'lab5'
+include 'owner-consumer-microservice'
+include 'entites_module'
+include 'owner-producer-microservice'
+include 'cats-producer-microservice'
+include 'cats-consumer-microservice'
+include 'api-gateway'
+include 'discovery-server'
+include 'authentication-service'
+include 'security-common'
+
